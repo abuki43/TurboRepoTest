@@ -1,0 +1,17 @@
+{
+    "extends":"@workspace/typescript-config/nextjs.json",
+    "excude":["node_modules"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./*"],
+            "@workspace/ui/*": ["../ui/src/*"]
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
+    }
+    
+}
