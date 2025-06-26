@@ -1,15 +1,16 @@
 {
-    "login": {
-        "welcome": "am-Welcome back!",
-        "description":"am-Login to you system account",
-        "email": "am-Email",
-        "password": "am-Password",
-        "forgotPassword": "am-Forgot your password?",
-        "login": "am-login",
-        "loggingIn": "am-Logging in..."
-    },
-    "dashboard": {
-        "title": "am-Dashboard",
-        "welcome": "am-Welcome to your dashboard"
-    }
+  "login": {
+    "welcome": "እንኳን ደህና መጣህ!",
+    "description": "ወደ ሲስተም መለያህ ግባ",
+    "email": "ኢሜል",
+    "password": "የይለፍ ቃል",
+    "forgotPassword": "የይለፍ ቃልህን ረሳህ?",
+    "login": "ግባ",
+    "loggingIn": "በመግባት ላይ..."
+  },
+  "dashboard": {
+    "title": "ዳሽቦርድ",
+    "welcome": "ወደ ዳሽቦርድህ እንኳን ደህና መጣህ",
+    "selectedDate": "የተመረጠ ቀን"
+  }
 }
