@@ -7,24 +7,24 @@ import useAuth from "@workspace/core/src/auth/use-auth";
 import Image from "next/image";
 import placeholder from "../public/place-holder.jpg";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 // import { useRouter } from "next/navigation";
 
 
 export default function Page() {
   // const router = useRouter();
 
+  const t = useTranslations("login");
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const {  loading, error, login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("logging in",{ email, password });
-    
+    console.log("logging in",{ email, password }); 
     await login(email, password);
     // router.push("/dashboard");
-    
   };
 
   return (
@@ -32,7 +32,7 @@ export default function Page() {
       <Card className="flex overflow-hidden shadow-2xl w-full max-w-4xl rounded-2xl py-0">
         <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-0 p-0">
           <div className="flex items-center justify-center p-6">
-            <LoginForm setEmail={setEmail} email={email} setPassword={setPassword} password={password} handleSubmit={handleSubmit} loading={loading} error={error}/>
+            <LoginForm setEmail={setEmail} email={email} setPassword={setPassword} password={password} handleSubmit={handleSubmit} loading={loading} error={error} t={t}/>
 
           
           </div>

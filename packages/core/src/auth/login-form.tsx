@@ -11,22 +11,23 @@ interface LoginFormProps {
   handleSubmit: (e:React.FormEvent) => void;
   loading?: boolean;
   error:string | null;
+  t:any // translation function 
 }
 
-export default function LoginForm({setEmail,setPassword,handleSubmit,email,password,loading,error}: LoginFormProps) {
+export default function LoginForm({setEmail,setPassword,handleSubmit,email,password,loading,error,t}: LoginFormProps) {
   return (
     <form className="p-6 md:p-10 w-full h-full">
       <div className="flex flex-col gap-6">
         <div className="text-center">
-          <h1 className="text-3xl font-semibold tracking-tight">Welcome back</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">{t("welcome")}</h1>
           <p className="text-muted-foreground text-sm mt-1">
-            Login to your system account
+            {t("description")}
           </p>
         </div>
 
         <div className="grid gap-4">
           <div className="grid gap-1">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">{t("email")}</Label>
             <Input
               id="email"
               type="email"
@@ -40,9 +41,9 @@ export default function LoginForm({setEmail,setPassword,handleSubmit,email,passw
 
           <div className="grid gap-1 my-2">
             <div className="flex justify-between items-center">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">{t("password")}</Label>
               <a href="#" className="text-sm text-muted-foreground hover:underline">
-                Forgot password?
+                {t("forgotPassword")}
               </a>
             </div>
             <Input id="password" type="password" required className="bg-background" onChange={(e)=>setPassword(e.target.value)} value={password}/>
@@ -52,7 +53,7 @@ export default function LoginForm({setEmail,setPassword,handleSubmit,email,passw
             {loading && (
               <svg className="mr-3 size-5 animate-spin border-white border-2 rounded-full" viewBox="0 0 24 24"> </svg>
             )}
-            {loading ? "Logging in..." : "Login"}
+            {loading ? t("loggingIn") : t("login")}
           </Button>
 
           {error && (

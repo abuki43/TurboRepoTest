@@ -1,0 +1,15 @@
+{
+    "login": {
+        "welcome": "am-Welcome back!",
+        "description":"am-Login to you system account",
+        "email": "am-Email",
+        "password": "am-Password",
+        "forgotPassword": "am-Forgot your password?",
+        "login": "am-login",
+        "loggingIn": "am-Logging in..."
+    },
+    "dashboard": {
+        "title": "am-Dashboard",
+        "welcome": "am-Welcome to your dashboard"
+    }
+}
