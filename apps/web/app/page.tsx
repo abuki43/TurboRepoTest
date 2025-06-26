@@ -7,11 +7,11 @@ import useAuth from "@workspace/core/src/auth/use-auth";
 import Image from "next/image";
 import placeholder from "../public/place-holder.jpg";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 
 export default function Page() {
-  const router = useRouter();
+  // const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,7 @@ export default function Page() {
     console.log("logging in",{ email, password });
     
     await login(email, password);
-    router.push("/dashboard");
+    // router.push("/dashboard");
     
   };
 
