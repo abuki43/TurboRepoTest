@@ -1,3 +1,5 @@
+"use client";
+
 import { use, useState } from "react";
 import useUserStore from "../store/user-store";
 import z from "zod";

@@ -3,6 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig = {
   transpilePackages: ["@workspace/ui"],
+  
 }
 
 const withNextIntl = createNextIntlPlugin(

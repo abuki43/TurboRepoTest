@@ -27,7 +27,7 @@ export default function DashboardPage() {
   
 
   return (
-    <div className="flex flex-col items-center  py-24  h-screen bg-background px-4">
+    <div className="flex flex-col items-center  py-24  h-full w-full bg-background px-4">
       <h1 className="text-3xl font-semibold tracking-tight">
         {t("welcome")} <code>{user?.email}</code>
       </h1>

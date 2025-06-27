@@ -1,5 +1,7 @@
 {
-  "extends": "@workspace/typescript-config/react-library.json",
+  "extends": ["@workspace/typescript-config/react-library.json",
+    "@workspace/typescript-config/nextjs.json"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
